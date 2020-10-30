@@ -1,10 +1,15 @@
+
 export default class PreloadScene extends Phaser.Scene {
+  logo: Phaser.GameObjects.Image
+
+
   constructor() {
     super({ key: 'PreloadScene' })
   }
 
   preload() {
-    this.load.image('phaser-logo', 'assets/img/phaser-logo.png')
+   this.load.image('phaser-logo', 'assets/img/phaser-logo.png')
+
   }
 
   create() {
