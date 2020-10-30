@@ -3,4 +3,10 @@
         height: 100%;
         margin: 0;
         background-color: #000000;
-      }</style><noscript>Please enable javascript to continue using this application.</noscript><script defer="defer" src="vendors.0fe2e5b861f526e1a044.bundle.js"></script><script defer="defer" src="main.a1e487c01465c3eb458f.bundle.js"></script></head><body><div id="phaser-game"></div></body></html>
+      }</style><noscript>Please enable javascript to continue using this application.</noscript><script>if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((error) => {
+            console.error(`Service Worker registration failed: ${error}`)
+          })
+        })
+      }</script><script defer="defer" src="vendors.97b95be86227bf2ced05.bundle.js"></script><script defer="defer" src="main.0697d6680cd4613c54e1.bundle.js"></script></head><body><div id="phaser-game"></div></body></html>

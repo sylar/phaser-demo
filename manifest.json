@@ -1,6 +1,6 @@
 {
   "short_name": "Phaser Demo",
-  "name": "{Phaser 3 Demo Game}",
+  "name": "Phaser 3 Demo Game",
   "icons": [
     {
       "src": "./icons/icons-192.png",
