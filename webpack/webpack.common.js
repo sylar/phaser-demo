@@ -32,6 +32,7 @@ module.exports = {
     new CopyWebpackPlugin({patterns:[
       { from: 'src/assets', to: 'assets' },
       { from: 'pwa/manifest.json', to: 'manifest.json' },
+      { from: 'pwa/icons', to: 'icons' },
       { from: 'src/assets/favicon.ico', to: 'favicon.ico' }
     ]}),
     new InjectManifest({

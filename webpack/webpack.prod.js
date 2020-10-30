@@ -23,7 +23,8 @@ const prod = {
     rules: [{
       test: /\.js$/,
       exclude: [ 
-          path.resolve(__dirname, 'vendors.*.js') 
+          path.resolve(__dirname, 'vendors.*.js'),
+          path.resolve(__dirname, 'sw.js') 
       ],
       enforce: 'post',
       use: { 
@@ -35,7 +36,8 @@ const prod = {
             stringArrayThreshold: 0.75
           }
       }
-  }]
+  }
+]
   },
   plugins: [
     new CleanWebpackPlugin()
