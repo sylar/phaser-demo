@@ -13,7 +13,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js']
   },
   module: {
-    rules: [{ test: /\.tsx?$/, include: path.join(__dirname, '../src'), loader: 'ts-loader' }]
+    rules: [{ test: /\.tsx?$/, include: [path.join(__dirname, '../src'), path.join(__dirname, '../pwa')], loader: 'ts-loader' }]
   },
   optimization: {
     splitChunks: {
@@ -31,11 +31,12 @@ module.exports = {
     new HtmlWebpackPlugin({ gameName: 'Phaser 3 Demo Game', template: 'src/index.html' }),
     new CopyWebpackPlugin({patterns:[
       { from: 'src/assets', to: 'assets' },
-      { from: 'pwa', to: '' },
-      { from: 'src/assets/favicon.ico', to: '' }
+      { from: 'pwa/manifest.json', to: 'manifest.json' },
+      { from: 'src/assets/favicon.ico', to: 'favicon.ico' }
     ]}),
     new InjectManifest({
-      swSrc: path.join(process.cwd(), 'pwa/sw.js')
+      swSrc: path.join(process.cwd(), 'pwa/sw.ts'),
+      swDest: path.join(process.cwd(), 'dist/sw.js')
     })
   ]
 }

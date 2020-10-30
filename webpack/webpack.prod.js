@@ -38,7 +38,7 @@ const prod = {
   }]
   },
   plugins: [
-    new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, '../dist/*.js')] })
+    new CleanWebpackPlugin()
   ]
 }
 
